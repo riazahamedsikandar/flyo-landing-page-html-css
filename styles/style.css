@@ -1,280 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700&display=swap');
+
 * {
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: hsl(270, 20%, 96%);
-  font-family: "Rubik", sans-serif;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+	color: hsl(243, 87%, 12%);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
+	margin: 0;
 }
 
-.phone {
-  display: flex;
-  flex-direction: column;
-  width: 210px;
-  max-height: 100%;
-  height: 450px;
-  border-radius: 20px;
-  padding: 10px;
-  background-color: white;
-  margin-bottom: 40px;
+a {
+	color: #3da08f;
 }
 
-.phone-header {
-  background-image: linear-gradient(
-    to right,
-    hsl(264, 100%, 61%),
-    hsl(293, 100%, 63%)
-  );
-  border-radius: 20px 20px 8px 8px;
-  width: 100%;
-  height: 60px;
+img {
+	max-width: 100%;
 }
 
-.phone-header-camera {
-  background-color: white;
-  height: 20px;
-  width: 130px;
-  margin: auto;
-  border-radius: 0px 0px 30px 30px;
+h1,
+h2,
+h4 {
+	font-family: 'Raleway', sans-serif;
 }
 
-.phone-header-description {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  color: white;
-  display: flex;
-  justify-content: space-between;
+h2 {
+	font-size: 1.8em;
+	margin-top: 0;
 }
 
-.phone-header-left {
-  display: flex;
-  width: 65%;
-  justify-content: space-around;
+.container {
+	padding: 30px;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 1200px;
 }
 
-.uil-ellipsis-v {
-  margin-right: 15px;
+.flex {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-.phone-header-description .uil-angle-left {
-  font-size: 20px;
+.align-start {
+	align-items: flex-start;
 }
 
-.phone-header-description img {
-  width: 25px;
-  border: 1px solid white;
-  border-radius: 50px;
+.flex > div,
+.flex > ul {
+	flex: 1;
 }
 
-.name {
-  font-size: 12px;
+.flex > div:first-child {
+	margin-right: 20px;
 }
 
-.availability {
-  font-size: 8px;
-  color: lightgray;
+.flex > div:last-child {
+	margin-left: 20px;
 }
 
-.phone-body {
-  overflow: auto;
-  width: 100%;
-  flex-grow: 1;
-  border-radius: 0px 0px 20px 20px;
-  background-color: hsl(270, 20%, 96%);
+/* Nav styling */
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 30px 0;
 }
 
-.phone-body .message {
-  font-size: 8px;
-  display: inline-block;
-  margin-top: 7px;
+nav ul {
+	display: flex;
+	padding: 0;
+	list-style-type: none;
 }
 
-.phone-body .left p {
-  background-color: hsl(0, 14%, 91%);
-  color: hsl(276, 55%, 52%);
-  border-radius: 10px 10px 10px 5px;
-  padding: 7px;
-  margin-left: 10px;
+nav ul li {
+	margin-left: 50px;
 }
 
-.phone-body .right {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+nav ul a {
+	color: hsl(243, 87%, 12%);
+	font-family: 'Raleway', sans-serif;
+	text-decoration: none;
 }
 
-.pictures {
-  margin-top: 7px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+/* Form Section */
+form {
+	display: flex;
 }
 
-.pictures img {
-  width: 38px;
-  margin-right: 10px;
-  border-radius: 10px;
+input {
+	border: 1px solid hsl(243, 87%, 12%);
+	border-radius: 2px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	flex: 0.7;
+	padding: 15px;
 }
 
-.phone-body .right p {
-  background-color: white;
-  border-radius: 10px 10px 5px 10px;
-  padding: 7px;
-  margin-right: 10px;
+input::placeholder {
+	color: hsl(0, 0%, 75%);
 }
 
-.payment {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 140px;
-  margin-left: 10px;
-  margin-top: 7px;
-  color: white;
-  background-image: linear-gradient(
-    to left,
-    hsl(264, 100%, 61%),
-    hsl(293, 100%, 63%)
-  );
-  padding: 7px;
-  border-radius: 10px 10px 10px 5px;
-}
-.payment-left {
-  display: flex;
-  align-items: center;
-  width: 80%;
+button {
+	border: 1px solid hsl(224, 93%, 58%);
+	background-color: hsl(224, 93%, 58%);
+	border-radius: 2px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	flex: 0.3;
+	padding: 15px;
+	margin-left: 10px;
 }
 
-.payment-left i {
-  color: hsl(270, 20%, 96%);
+.light-blueish {
+	background-color: hsl(240, 75%, 98%);
+	margin-top: 100px;
+	position: relative;
+	padding: 50px 0;
 }
 
-.payment p {
-  font-size: 8px;
-  margin-left: 5px;
+.light-blueish::before {
+	content: '';
+	background-image: url('./images/bg-curve-desktop.svg');
+	background-size: cover;
+	background-position: center center;
+	position: absolute;
+	top: -60px;
+	left: 0;
+	height: 60px;
+	width: 100%;
 }
 
-.payment .amount {
-  font-size: 14px;
-  font-weight: 700;
+/* Testimonial */
+.testimonial-box {
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 25px;
+	margin-top: 40px;
+	width: 80%;
 }
 
-.type-message {
-  margin: auto;
-  margin-top: 20px;
-  background-color: white;
-  width: 90%;
-  height: 40px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.testimonial-box p {
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 1.7;
 }
 
-.type-message p {
-  font-size: 10px;
-  color: lightgray;
-  margin-left: 15px;
+.user-info {
+	display: flex;
+	margin-top: 20px;
 }
 
-.type-message .send {
-  width: 30px;
-  height: 30px;
-  background-color: hsl(271, 36%, 24%);
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5px;
-  border-radius: 100px;
+.user-info img {
+	border-radius: 50%;
+	height: 50px;
+	margin-right: 10px;
+	width: 50px;
 }
 
-.type-message .send i {
-  color: white;
+.user-info h4 {
+	font-weight: 700;
+	margin: 0;
 }
 
-.description-head,
-.description-text {
-  text-align: center;
+/* Blueish */
+.blueish {
+	background-color: hsl(238, 22%, 44%);
+	color: #fff;
+	padding: 50px 0;
 }
 
-.description-head {
-  color: hsl(271, 36%, 24%);
-  margin-bottom: 20px;
-  font-weight: 500;
+.blueish form {
+	flex-direction: column;
 }
 
-.description-text {
-  color: hsl(270, 7%, 64%);
-  font-size: 14px;
-  width: 70%;
-  margin: auto;
-  font-weight: normal;
+.blueish form input {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border: none;
+	flex: 1;
 }
 
-.purpleBody {
-  background-image: linear-gradient(
-    to top left,
-    hsl(264, 100%, 61%),
-    hsl(293, 100%, 63%)
-  );
-  width: 50%;
-  height: 400px;
-  align-self: flex-start;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 0 0 1000px 0px;
+.blueish form button {
+	margin: 20px 0 0;
+	width: 50%;
 }
 
-.greybody {
-  background-color: hsl(0, 14%, 91%);
-  width: 50%;
-  height: 400px;
-  align-self: flex-start;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  border-radius: 1000px 0px 0px 0px;
+
+footer {
+	background-color: hsl(243, 87%, 12%);
+	color: #fff;
+	padding: 50px 0;
 }
 
-@media only screen and (min-width: 1000px) {
-  body {
-    flex-direction: row;
-  }
+footer ul {
+	list-style-type: none;
+}
 
-  .description {
-    margin-left: 100px;
-  }
+footer ul li {
+	margin-bottom: 20px;
+}
 
-  .description-head {
-    text-align: left;
-  }
+footer .social-media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-  .description-text {
-    width: 400px;
-    text-align: left;
-  }
+footer .circle {
+	border: 1px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+	height: 40px;
+	width: 40px;
+	text-decoration: none;
+}
 
-  .purpleBody {
-    width: 25%;
-    border-radius: 0 0 1000px 1000px;
-    height: 550px;
-  }
+footer p {
+	text-align: right;
+}
 
-  .greybody {
-    width: 25%;
-    height: 550px;
-  }
+@media screen and (max-width: 768px) {
+	body {
+		text-align: center;
+	}
+
+	nav {
+		flex-direction: column;
+		margin: 10px 0;
+	}
+
+	nav ul li {
+		margin: 10px 20px;
+	}
+
+	.light-blueish::before {
+		background-image: url('./images/bg-curve-mobile.svg');
+		height: 80px;
+	}
+
+	.flex {
+		flex-direction: column;
+	}
+
+	.flex > div {
+		width: 100%;
+	}
+
+	.flex > div:first-child {
+		margin-right: 0;
+	}
+
+	.flex > div:last-child {
+		margin-left: 0;
+	}
+
+	.testimonial-box {
+		width: 100%;
+	}
+
+	.blueish form input {
+		flex: 1;
+	}
+
+	.blueish form button {
+		margin: 20px 0;
+		width: 100%;
+	}
+
+	.illustration {
+		margin-top: 30px;
+	}
+
+	.user-info {
+		justify-content: center;
+	}
+
+	footer ul {
+		padding: 0;
+		width: 100%;
+	}
 }
